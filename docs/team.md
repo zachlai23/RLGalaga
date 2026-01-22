@@ -10,7 +10,7 @@ title:  Team
 ***UCI Net ID***: bkim3164
 
 ## Zachary Ian Lai
-***UCI Net ID***: zachlai23
+***UCI Net ID***: zilai
 
 ## Zongze Li
 ***UCI Net ID***: zongzel3
