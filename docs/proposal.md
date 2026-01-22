@@ -18,7 +18,7 @@ Moonshot goal: Create an agent that exhibits expert gameplay and has adaptive st
 ## AI/ML Algorithms
 
 ## Evaluation Plan
-One basic metric we will use to quantitatively evaluate our agent is through achievements in the game like levels passed, time to finish a level, and damage taken.  We can compare these statistics to our group members scores playing the game, or scores found online.  As our baseline model, we will sue a simple rule based agent and record it's scores.  We estimate the agent we implement will be significantly more accurate and understand the game logic better than the baseline.
+One basic metric we will use to quantitatively evaluate our agent is through achievements in the game like levels passed, time to finish a level, and damage taken.  We can compare these statistics to our group members scores playing the game, or scores found online.  As our baseline model, we will use a simple rule based agent and record it's scores.  We estimate the agent we implement will be significantly more accurate and understand the game logic better than the baseline.
 
 Qualitative...
 
