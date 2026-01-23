@@ -41,6 +41,8 @@ We will quantitatively evaluate our agent using game achievements including:
 
 Our baseline model will be a simple rule-based agent. We expect our RL agent to significantly outperform the baseline in accuracy and game logic understanding.
 
+Qualitatively, we will analyze the agents movement of the starfighter, and observe if there are any movements out of the ordinary or that do not make sense in achieving the goal of the game, and we can adjust accordingly.  To visualize results we can plot learning curves for the baseline and different algorithms against each other on a single graph.
+
 ## Tools & Resources
 
 - **AI Assistance**: ChatGPT
