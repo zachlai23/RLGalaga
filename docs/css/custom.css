@@ -15,6 +15,7 @@
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --content-max: 900px;
 }
 
 * {
@@ -70,6 +71,56 @@ body {
 .nav-link.active {
   color: var(--primary-color) !important;
   border-bottom: 2px solid var(--primary-color);
+}
+
+/* Navbar layout fixes (prevents list bullets / vertical stacking when Bootstrap defaults are overridden) */
+.navbar .container,
+.navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar-nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav .nav-link {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* If the navbar collapses on small screens, allow vertical stacking */
+@media (max-width: 768px) {
+  .navbar .container,
+  .navbar .container-fluid {
+    flex-wrap: wrap;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding-top: 0.5rem;
+  }
 }
 
 /* Page Header Section */
@@ -143,7 +194,8 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: var(--content-max);
+  width: 100%;
 }
 
 /* Typography */
@@ -176,7 +228,7 @@ h4 {
 
 p {
   color: var(--text-secondary);
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
   line-height: 1.7;
 }
 
@@ -192,10 +244,21 @@ a:hover {
   text-decoration: underline;
 }
 
+/* If a button contains an <a>, inherit the button’s color instead of the global link color */
+.btn a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.btn a:hover {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
 /* Lists */
 ul, ol {
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem 0;
   padding-left: 1.5rem;
 }
 
@@ -249,15 +312,31 @@ pre code {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
   border: none;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.card-header,
-.card-header * {
-  color: #ffffff;
+.card-header h1,
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header h5,
+.card-header h6 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
 }
 
 .card-body {
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.card-body p {
+  margin-top: 0;
 }
 
 /* Buttons */
@@ -272,11 +351,18 @@ pre code {
 .btn-primary {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   border: none;
+  color: #ffffff !important;
+}
+
+.btn-primary,
+.btn-primary * {
+  color: #ffffff !important;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+  color: #ffffff !important;
 }
 
 .btn-outline-primary {
@@ -297,6 +383,8 @@ pre code {
   font-size: 0.9rem;
   padding: 1.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-left: max(1rem, calc((100vw - var(--content-max)) / 2));
+  padding-right: max(1rem, calc((100vw - var(--content-max)) / 2));
 }
 
 .footer h1,
@@ -311,6 +399,10 @@ pre code {
 .footer p,
 .footer li {
   color: inherit;
+}
+
+.footer p {
+  margin: 0;
 }
 
 .footer a {
