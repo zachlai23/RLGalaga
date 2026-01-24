@@ -1,6 +1,8 @@
 ---
 layout: default
-title:  Home
+title: Home
+statusClass: disabled
+finalClass: disabled
 ---
 
 ## Overview
@@ -28,7 +30,7 @@ Welcome to the RLSpaceInvaders project! This is a reinforcement learning initiat
       </div>
       <div class="card-body">
         <p>Check out our current progress and project milestones.</p>
-        <a href="status.html" class="btn btn-primary btn-sm">View Status →</a>
+        <a class="btn btn-secondary btn-sm disabled" aria-disabled="true">Coming soon</a>
       </div>
     </div>
   </div>
@@ -39,7 +41,7 @@ Welcome to the RLSpaceInvaders project! This is a reinforcement learning initiat
       </div>
       <div class="card-body">
         <p>See our final results and conclusions.</p>
-        <a href="final.html" class="btn btn-primary btn-sm">Read Final →</a>
+        <a class="btn btn-secondary btn-sm disabled" aria-disabled="true">Coming soon</a>
       </div>
     </div>
   </div>
@@ -49,5 +51,4 @@ Welcome to the RLSpaceInvaders project! This is a reinforcement learning initiat
 
 Checkout our implementation on GitHub:
 
-**[View on GitHub →](https://github.com/zachlai23/RLGalaga)**
-
+**[View on GitHub →](https://github.com/zachlai23/RLSpaceInvaders)**
