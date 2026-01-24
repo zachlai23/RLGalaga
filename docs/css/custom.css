@@ -312,10 +312,11 @@ pre code {
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
   overflow: hidden;
+  margin-bottom: 1rem; /* spacing between stacked cards */
 }
 
-.card + .card {
-  margin-top: 0.5rem;
+.card:last-child {
+  margin-bottom: 0;
 }
 
 .card:hover {
