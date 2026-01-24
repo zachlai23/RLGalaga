@@ -40,10 +40,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-collapse">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 list-unstyled">
                     <li class="nav-item">
                         <a class="nav-link {% if page.url == '/' or page.url == '/index.html' %}active{% endif %}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %} href="{{ '/' | relative_url }}">Home</a>
